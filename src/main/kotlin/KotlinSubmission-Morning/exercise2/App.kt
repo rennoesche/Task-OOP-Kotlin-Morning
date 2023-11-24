@@ -1,5 +1,7 @@
 package id.infinitelearning.KotlinSubmission.exercise2
 
+import java.time.LocalDate
+
 fun main() {
 
     /** Latihan 1 List
@@ -9,6 +11,13 @@ fun main() {
     - Agar lebih mudah, gunakanlah for loop dan logika if untuk mengisi bilangan genap pada list
      */
     // Buat di bawah sini
+    val bilangangenap = mutableListOf<Int>()
+
+    for (bil in 1..100) {
+        if (bil % 2 == 0) {
+            bilangangenap.add(bil)
+        }
+    }
 
 
     /** Latihan 2 Map
@@ -18,18 +27,31 @@ fun main() {
     - key "Jan", value January
     - key "Feb", value February
     - dst...
+     **/
     // Buat di bawah sini
+    val listMonth = mapOf("Jan" to "January","Feb" to "February","Mar" to "March","Apr" to "April","May" to "May","Jun" to "June","Jul" to "July","Aug" to "August","Sep" to "September","Oct" to "October","Nov" to "November","Dec" to "December")
 
+
+    /**
     Cetak semua nama bulan dengan fungsi forEach sehingga hasil output seperti:
     - Jan -> January
     - Feb -> February
     - Dst...
+     */
     // Buat di bawah sini
 
+    listMonth.forEach {(k,v) ->
+        println("$k -> $v")}
+
+    /**
     Cetak nama bulan sekarang dan bulan lahir kamu dengan format string berikut:
     - "It's {$monthNow} now, I was born in {$birthMonth}"
      */
     // Buat di bawah sini
+    val monthNow = LocalDate.now().month
+    val birthMonthKey = "Mar"
+    val birthMonth = listMonth[birthMonthKey]
+    println("It's $monthNow now, I was born in $birthMonth")
 
 
 }

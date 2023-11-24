@@ -8,6 +8,8 @@ fun main() {
      *
      */
 
+    val myHero = Hero()
+
 
     /**
      * Latihan 2
@@ -16,6 +18,8 @@ fun main() {
      *
      */
 
+    myHero.setProfile("Rafi",22,170)
+
 
 
     /**
@@ -23,6 +27,7 @@ fun main() {
      * Tampilkan data profile dibawah ini, sebelum melakukan aktivitas
      *
      */
+    myHero.profile()
 
 
 
@@ -64,7 +69,17 @@ fun main() {
      * Latihan 4
      * Jalankan aktivitas-aktivitas dengan memanggil fungsi-fungsi sesuai challenge diatas
      *
+     * Uprising Moon Inteligent -> jalan 5x, lari 2x, makan 3x, minum 1x, lompat 3x, duduk 1x
      */
+    repeat(5) {myHero.jalan()}
+    repeat(2) {myHero.lari()}
+    repeat(3) {myHero.makan()}
+    repeat(1) {myHero.minum()}
+    repeat(3) {myHero.lompat()}
+    repeat(1) {myHero.duduk()}
+
+
+
 
 
 
@@ -73,6 +88,8 @@ fun main() {
      * Panggil fungsi profile dibawah ini untuk menampilkan status terkini setelah melakukan aktivitas
      *
      */
+
+    myHero.profile()
 
 
 

@@ -16,5 +16,24 @@ fun main() {
     - Isi variabel result dengan nilai: 'Anda mendapatkan nilai E.'
      */
     // Buat di bawah sini
+    val nilai = 90
 
+    val grade = if (nilai >= 90) {
+        println("Selamat! Anda mendapatkan nilai A.")
+    }
+    else if (nilai in 80 .. 89) {
+        println("Selamat! Anda mendapatkan nilai B.")
+    }
+    else if (nilai in 70 .. 79) {
+        println("Selamat! Anda mendapatkan nilai C.")
+    }
+    else if (nilai in 60 .. 69) {
+        println("Selamat! Anda mendapatkan nilai D.")
+    }
+    else if (nilai < 60) {
+        println("Selamat! Anda mendapatkan nilai D.")
+    }
+    else {
+        println("undefined")
+    }
 }
